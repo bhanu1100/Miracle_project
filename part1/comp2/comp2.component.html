@@ -1,0 +1,63 @@
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#orders">Orders</a>
+    <a href="#cart">cart</a>
+    <a href="#contact" routerLink="/contact" routerLinkActive="active">Contact</a>
+    <input type="text" placeholder="Search..">
+    <div class="topnav-right">
+      <a href="#register" routerLink="/reg" routerLinkActive="active">username</a>
+    </div>
+    </div>
+<div class="welcome">
+    <h1>Miracle Stores</h1>
+    <p>Shop the latest trends in fashion, electronics, and more.</p>
+</div>
+    <!-- <div class="main">
+        <div class="list">
+        <ul type="disc">
+            <li> <a href="#">Clothing</a> </li><br>
+            <li> <a href="#">Electronics</a> </li><br>
+            <li> <a href="#">Furniture</a> </li><br>
+            <li> <a href="#">Home Applicances</a> </li><br>
+        </ul> 
+        </div> -->
+        <div class="row">
+            
+            <div class="column">
+              <a href="#" routerLink="/men" routerLinkActive="active" >
+                <img src="/assets/men.jpg" alt="mens" style="width:100%" (click)="retrieveDataByCategory()">
+              </a><br>
+              
+              <P>Men</P>
+            </div>
+            <div class="column">
+              <a href="#" routerLink="/women" routerLinkActive="active">
+              <img src="/assets/women.jpg" alt="Womens" style="width:100%"></a><br>
+              <P>Women</P>
+            </div>
+            <div class="column">
+              <a href="#" routerLink="/kids" routerLinkActive="active">
+             <img src="/assets/children.jpg" alt="Childerns" style="width:100%"></a><br>
+              <P>Kids</P>
+            </div>
+            <div class="column">
+              <a href="#" routerLink="/electronics" routerLinkActive="active">
+              <img src="/assets/electronics.jpg" alt="electronics" style="width:100%"></a><br>
+              <P>Electronics</P>
+            </div>
+            <div class="column">
+              <a href="#" routerLink="/furniture" routerLinkActive="active">
+              <img src="/assets/furniture.png" alt="furniture" style="width:100%"></a><br>
+              <P>Furniture</P>
+            </div>
+            <div class="column">
+              <a href="#" routerLink="/access" routerLinkActive="active">
+                <img src="/assets/acess1.jpg" alt="furniture" style="width:100%"></a><br>
+                <P>Accessories</P>
+              </div>
+        </div>
+
+
+    <footer>
+        <p>&copy; 2023 Your Miracle Store. All rights reserved.</p>
+      </footer>

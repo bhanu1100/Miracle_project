@@ -1,0 +1,54 @@
+<br>
+<body>
+    <div class="wrapper">
+      <h1 style="color: rgb(166, 252, 214);margin-left: 33%;">Registration</h1>
+      <form  [formGroup]="myForm">
+        <div class="input-box">  
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="pi pi-user" style="font-size: 1.1rem;color:rgb(166, 252, 214)"></i>&nbsp;
+        <label class="st"> First Name:-</label>
+        <input class="sp" type="text" placeholder="Enter your firstname" pInputText formControlName="firstname" />
+<div class="space" *ngIf="firstname && firstname.invalid && firstname.touched" style="color:rgb(255, 0, 0);font-weight: bold;">Please Enter Proper FirstName</div>&nbsp;&nbsp;&nbsp;<br>
+</div><br>
+<div class="input-box">
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="pi pi-user-plus" style="font-size: 1.1rem;color:aqua;"></i>&nbsp;
+<label class="st">Last Name:-</label>
+     <input class="sp" type="text" placeholder="Enter lastname" pInputText formControlName="lastname"/>
+    <div class="space" *ngIf="lastname && lastname.invalid && lastname.touched" style="color:red">Please Enter Valid LastName</div>
+</div><br>
+<div class="input-box">
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="pi pi-at" style="font-size: 1.1rem;color:aqua"></i>&nbsp;
+    <label class="st">Email ID:- &nbsp;&nbsp;</label>
+     <input class="sp" type="email" placeholder="Enter Email Id" pInputText formControlName="email" />
+    <div class="space"*ngIf="email && email.invalid && email.touched" style="color:red">Please Enter Proper Email</div>&nbsp;
+</div><br>
+<div class="input-box">
+
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="pi pi-phone" style="font-size: 1.1rem;color:aqua"></i>&nbsp;
+    <label class="st">Phone NO:- </label> <input class="sp" type="text" placeholder="Enter PhoneNumber" pInputText formControlName="phno"/>
+    <div  class="space" *ngIf="phno && phno.invalid && phno.touched" style="color:red">Please Enter Valid PhoneNumber</div><br>
+   </div><br>
+    <div class="input-box">
+
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="pi pi-lock" style="font-size: 1.1rem;color:aqua"></i>&nbsp;
+        <label class="st">Password :-</label> &nbsp;
+        <p-password class="sp" [toggleMask]="true" type="password" placeholder="Enter Password"  formControlName="password"/>
+    <div class="space" *ngIf="password && password.invalid && password.touched" style="color:red">Please Enter Valid Password</div><br>
+        </div><br>
+        <div class="input-box">  
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="pi pi-user" style="font-size: 1.1rem;color:rgb(166, 252, 214)"></i>&nbsp;
+            <label class="st">City:-</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="sp" type="text" placeholder="Enter your city" pInputText formControlName="city" />
+    <div class="space" *ngIf="city && city.invalid && city.touched" style="color:rgb(255, 0, 0);font-weight: bold;">Please Enter Proper city</div>&nbsp;&nbsp;&nbsp;<br>
+    </div><br>
+    
+         <div class="input-box button">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button pButton pRipple type="button" type="Submit" value="Register "style="color:white;padding-right: 13%;padding-left: 19%; margin-left:20% ;"  (click)="submit()"[disabled]="!myForm.valid">Register</button>
+
+        </div> 
+        <br>
+        <div class="text">
+          <h3 style="font-size: large ;color: white;">Already have an account? <u><a routerLink="/login" routerLinkActive="active" style="color:white">Login </a></u></h3>
+        </div>
+      </form>
+    </div>
+  </body>
